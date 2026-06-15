@@ -5,27 +5,21 @@ body {
   color: white;
 }
 
+#loginScreen {
+  text-align: center;
+  margin-top: 100px;
+}
+
 #app {
-  display: flex;
   height: 100vh;
-}
-
-#sidebar {
-  width: 200px;
-  background: #202225;
-  padding: 10px;
-}
-
-#chat {
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 #messages {
   flex: 1;
-  padding: 10px;
   overflow-y: auto;
+  padding: 10px;
 }
 
 .message {
@@ -50,6 +44,6 @@ body {
 button {
   padding: 10px;
   background: #5865f2;
-  color: white;
   border: none;
+  color: white;
 }
