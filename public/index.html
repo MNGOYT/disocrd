@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chat App</title>
+  <title>Chat Platform</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="loginScreen">
-  <h2>Login</h2>
-  <input id="usernameInput" placeholder="Enter username">
-  <button onclick="login()">Join</button>
+<!-- LOGIN -->
+<div id="login">
+  <div class="login-box">
+    <h1>Chat Platform</h1>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button class="login-btn" onclick="login()">Login</button>
+    <button class="create-btn" onclick="login()">Create Account</button>
+  </div>
 </div>
 
-<div id="app" style="display:none;">
-  <div id="messages"></div>
+<!-- APP -->
+<div id="app">
+  <!-- LEFT SERVERS -->
+  <div id="servers">
+    <div class="server-icon"></div>
+    <div class="server-icon"></div>
+    <div class="server-icon"></div>
+  </div>
 
-  <div id="inputArea">
-    <input id="input" placeholder="Type a message..." />
-    <button onclick="sendMessage()">Send</button>
+  <!-- CHANNELS -->
+  <div id="channels">
+    <h3>CHANNELS</h3>
+    <div id="channelList"></div>
+  </div>
+
+  <!-- CHAT AREA -->
+  <div id="chatArea">
+    <div id="topbar">
+      <span id="channelName"># general</span>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="messages"></div>
+
+    <div id="inputArea">
+      <button id="plus">+</button>
+      <input id="input" placeholder="Message">
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- MEMBERS -->
+  <div id="members">
+    <h3>Members</h3>
   </div>
 </div>
 
